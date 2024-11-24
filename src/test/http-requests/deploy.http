@@ -1,0 +1,7 @@
+### GET request para preparar o deploy da atividade
+GET http://localhost:8080/api/deploy?activityID=12345
+
+### Exemplo de resposta esperada:
+# {
+#   "deployURL": "http://activityprovider.com/activity/12345"
+# }
