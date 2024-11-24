@@ -1,6 +1,7 @@
 ### POST request para obter analytics de uma atividade
-POST http://localhost:8080/api/analytics
+POST https://0c23-2001-818-df8b-c900-1129-60a-9ec6-c2fb.ngrok-free.app/api/analytics
 Content-Type: application/json
+ngrok-skip-browser-warning: true
 
 {
   "activityID": "12345"

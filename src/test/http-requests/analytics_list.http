@@ -1,5 +1,5 @@
 ### GET request para obter a lista de analytics disponíveis
-GET http://localhost:8080/api/analytics/list
+GET https://0c23-2001-818-df8b-c900-1129-60a-9ec6-c2fb.ngrok-free.app/api/analytics/list
 
 ### Exemplo de resposta esperada:
 # {

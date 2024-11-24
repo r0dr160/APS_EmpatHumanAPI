@@ -1,5 +1,5 @@
 ### GET request para obter a lista de parâmetros da página de configuração
-GET http://localhost:8080/api/params
+GET https://0c23-2001-818-df8b-c900-1129-60a-9ec6-c2fb.ngrok-free.app/api/params
 
 ### Exemplo de resposta esperada:
 # [

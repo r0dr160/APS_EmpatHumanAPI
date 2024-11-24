@@ -9,6 +9,9 @@ import java.util.Map;
 @RequestMapping("/api")
 public class ApiController {
 
+    // Define a URL base pública gerada pelo ngrok
+    private static final String BASE_URL = "https://0c23-2001-818-df8b-c900-1129-60a-9ec6-c2fb.ngrok-free.app";
+
     @GetMapping("/config")
     public String getConfigPage() {
         return """
@@ -40,7 +43,7 @@ public class ApiController {
 
     @GetMapping("/deploy")
     public Map<String, String> deployActivity(@RequestParam String activityID) {
-        String accessUrl = "http://localhost:8080/activity/start?activityID=" + activityID;
+        String accessUrl = BASE_URL + "/activity/start?activityID=" + activityID;
         return Map.of("message", "Activity deployed successfully!", "accessUrl", accessUrl);
     }
 
@@ -56,7 +59,7 @@ public class ApiController {
                                 Map.of("name", "Evolução pela atividade (%)", "value", 33.3)
                         ),
                         "qualAnalytics", List.of(
-                                Map.of("Student activity profile", "http://localhost:8080/analytics/1001/profile")
+                                Map.of("Student activity profile", BASE_URL + "/analytics/1001/profile")
                         )
                 )
         );
