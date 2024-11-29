@@ -1,0 +1,22 @@
+### POST request para obter analytics de uma atividade
+POST https://meiw.duckdns.org/api/analytics
+Content-Type: application/json
+ngrok-skip-browser-warning: true
+
+{
+  "activityID": "12345"
+}
+
+### Exemplo de resposta esperada:
+# [
+#   {
+#     "inveniraStdID": 1001,
+#     "quantAnalytics": [
+#       { "name": "Acedeu à atividade", "value": true },
+#       { "name": "Evolução pela atividade (%)", "value": 75 }
+#     ],
+#     "qualAnalytics": [
+#       { "Student activity profile": "https://ActivityProvider/?APAnID=11111111" }
+#     ]
+#   }
+# ]

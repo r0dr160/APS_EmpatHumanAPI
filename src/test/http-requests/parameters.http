@@ -1,0 +1,9 @@
+### GET request para obter a lista de parâmetros da página de configuração
+GET https://meiw.duckdns.org/api/params
+
+### Exemplo de resposta esperada:
+# [
+#   { "name": "difficulty", "type": "text/plain" },
+#   { "name": "time_limit", "type": "integer" },
+#   { "name": "scenario", "type": "text/plain" }
+# ]

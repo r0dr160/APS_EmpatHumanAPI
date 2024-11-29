@@ -1,0 +1,13 @@
+### GET request para obter a página de configuração
+GET https://meiw.duckdns.org/api/config
+
+### Exemplo de resposta esperada:
+# <html>
+#   <body>
+#     <form>
+#       <input type="hidden" name="difficulty" value="medium">
+#       <input type="hidden" name="time_limit" value="60">
+#       <input type="hidden" name="scenario" value="urban">
+#     </form>
+#   </body>
+# </html>

@@ -1,0 +1,7 @@
+### GET request para preparar o deploy da atividade
+GET https://meiw.duckdns.org/api/deploy?activityID=12345
+
+### Exemplo de resposta esperada:
+# {
+#   "deployURL": "https://0c23-2001-818-df8b-c900-1129-60a-9ec6-c2fb.ngrok-free.app/activity/start?activityID=12345"
+# }
