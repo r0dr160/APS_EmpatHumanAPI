@@ -3,6 +3,12 @@
 ## Descrição do Projeto
 O **EmpatHumanAPI** é uma aplicação desenvolvida para gerenciar e expor serviços analíticos e de configuração de atividades através de uma API REST. Foi implementado utilizando **Spring Boot**, empacotado em um contêiner **Docker**, e está hospedado em uma infraestrutura pessoal baseada em uma **Raspberry Pi 3-B**.
 
+## **Novidades na Versão Atual**
+- Implementação do padrão **Singleton** para gerenciamento centralizado de dados.
+- Introdução da classe `SingletonService` no subpacote `services`, que permite:
+  - Armazenar e compartilhar informações entre endpoints de forma consistente.
+  - Garantir que apenas uma instância do serviço seja criada na aplicação.
+
 ## Arquitetura Implementada
 
 ### DNS Público
