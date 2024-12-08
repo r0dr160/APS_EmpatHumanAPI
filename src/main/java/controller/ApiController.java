@@ -1,5 +1,7 @@
 package com.empathuman.EmpatHumanAPI;
 
+import com.empathuman.EmpatHumanAPI.services.SingletonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,8 +11,16 @@ import java.util.Map;
 @RequestMapping("/api")
 public class ApiController {
 
-    // Define a URL base pública gerada pelo ngrok
+    // Define a URL base pública gerada pelo duckdns
     private static final String BASE_URL = "https://meiw.duckdns.org";
+
+    private final SingletonService singletonService;
+
+    // SingletonService no controlador
+    @Autowired
+    public ApiController(SingletonService singletonService) {
+        this.singletonService = singletonService;
+    }
 
     @GetMapping("/config")
     public String getConfigPage() {
@@ -43,8 +53,15 @@ public class ApiController {
 
     @GetMapping("/deploy")
     public Map<String, String> deployActivity(@RequestParam String activityID) {
+        // SingletonService armazena o ID da atividade
+        singletonService.setValue(activityID);
+
         String accessUrl = BASE_URL + "/activity/start?activityID=" + activityID;
-        return Map.of("message", "Activity deployed successfully!", "accessUrl", accessUrl);
+        return Map.of(
+                "message", "Activity deployed successfully!",
+                "accessUrl", accessUrl,
+                "singletonValue", singletonService.getValue() // Verifica o valor armazenado no Singleton
+        );
     }
 
     @PostMapping("/analytics")
@@ -77,5 +94,10 @@ public class ApiController {
                 )
         );
     }
-}
 
+    @GetMapping("/singleton/value")
+    public Map<String, String> getSingletonValue() {
+        // Endpoint para obter o valor atual do Singleton
+        return Map.of("singletonValue", singletonService.getValue());
+    }
+}
