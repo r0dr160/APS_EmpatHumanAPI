@@ -4,21 +4,20 @@ import org.springframework.stereotype.Service;
 
 @Service // Define esta classe como um Bean Singleton gerido pelo Spring
 public class SingletonService {
-
-    private String value;
+    private String lastAccessedActivity;
 
     // Construtor - Inicializa o valor padrão
     public SingletonService() {
-        this.value = "Valor inicial do SingletonService";
+        this.lastAccessedActivity = "Nenhuma atividade acessada ainda.";
     }
 
     // Método para obter o valor atual
-    public String getValue() {
-        return value;
+    public String getLastAccessedActivity() {
+        return lastAccessedActivity;
     }
 
     // Método para atualizar o valor
-    public void setValue(String value) {
-        this.value = value;
+    public void setLastAccessedActivity(String activityID) {
+        this.lastAccessedActivity = activityID;
     }
 }
