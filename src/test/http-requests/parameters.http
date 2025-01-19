@@ -1,5 +1,5 @@
 ### GET request para obter a lista de parâmetros da página de configuração
-GET https://meiw.duckdns.org/api/params
+GET http://localhost:9090/api/params
 
 ### Exemplo de resposta esperada:
 # [

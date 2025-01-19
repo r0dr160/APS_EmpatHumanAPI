@@ -1,5 +1,5 @@
 ### GET request para obter a página de configuração
-GET https://meiw.duckdns.org/api/config
+GET http://localhost:9090/api/config
 
 ### Exemplo de resposta esperada:
 # <html>

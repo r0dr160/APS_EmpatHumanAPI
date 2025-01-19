@@ -1,23 +1,29 @@
-package com.empathuman.EmpatHumanAPI.services;
+package services;
 
 import org.springframework.stereotype.Service;
 
-@Service // Define esta classe como um Bean Singleton gerido pelo Spring
-public class SingletonService {
-    private String lastAccessedActivity;
+/**
+ * Serviço Singleton que gerencia um estado compartilhado e notifica os observadores sobre mudanças.
+ *
+ * Padrão de Criação:
+ * - Garante que apenas uma instância desta classe seja criada na aplicação.
+ * - Fornece um ponto único para acessar e modificar o estado compartilhado.
+ */
+@Service
+public class SingletonService extends Observable {
+    private String value;
 
-    // Construtor - Inicializa o valor padrão
     public SingletonService() {
-        this.lastAccessedActivity = "Nenhuma atividade acessada ainda.";
+        this.value = "Valor inicial do SingletonService";
     }
 
-    // Método para obter o valor atual
-    public String getLastAccessedActivity() {
-        return lastAccessedActivity;
+    public String getValue() {
+        return value;
     }
 
-    // Método para atualizar o valor
-    public void setLastAccessedActivity(String activityID) {
-        this.lastAccessedActivity = activityID;
+    public void setValue(String value) {
+        this.value = value;
+        notifyObservers(value); // Notifica os observadores sobre a mudança de valor.
     }
 }
+

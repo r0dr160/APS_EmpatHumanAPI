@@ -1,5 +1,5 @@
 ### POST request para obter analytics de uma atividade
-POST https://meiw.duckdns.org/api/analytics
+POST http://localhost:9090/api/analytics
 Content-Type: application/json
 ngrok-skip-browser-warning: true
 

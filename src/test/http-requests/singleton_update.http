@@ -1,0 +1,13 @@
+### POST request para atualizar o valor do Singleton
+POST http://localhost:9090/api/singleton/update
+Content-Type: application/json
+
+{
+  "value": "Novo valor do Singleton"
+}
+
+### Exemplo de resposta esperada:
+# {
+#   "message": "Valor atualizado com sucesso",
+#   "newValue": "Novo valor do Singleton"
+# }

@@ -1,5 +1,5 @@
 ### GET request para preparar o deploy da atividade
-GET https://meiw.duckdns.org/api/deploy?activityID=12345
+GET http://localhost:9090/api/deploy?activityID=12345
 
 ### Exemplo de resposta esperada:
 # {

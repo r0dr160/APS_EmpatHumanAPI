@@ -1,0 +1,7 @@
+### GET request para obter o valor atual do Singleton
+GET http://localhost:9090/api/singleton/value
+
+### Exemplo de resposta esperada:
+# {
+#   "singletonValue": "Valor inicial do SingletonService"
+# }

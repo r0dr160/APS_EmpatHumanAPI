@@ -1,5 +1,5 @@
 ### GET request para obter a lista de analytics disponíveis
-GET https://meiw.duckdns.org/api/analytics/list
+GET http://localhost:9090/api/analytics/list
 
 ### Exemplo de resposta esperada:
 # {
