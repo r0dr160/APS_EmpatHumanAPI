@@ -191,12 +191,11 @@ curl -X POST https://meiw.duckdns.org/api/singleton/update \
 
 ## Diagramas
 
-### Diagrama de Sequência
-![Diagrama de Sequência](src/assets/component_diagram.png)
-
-
 ### Diagrama de Componentes
-![Diagrama de Componentes](src/assets/sequence_diagram.png)
+![Diagrama de Componentes](src/assets/component_diagram.png)
+
+### Diagrama de Sequência
+![Diagrama de Sequência](src/assets/sequence_diagram.png)
 ---
 
 ## Autor
