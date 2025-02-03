@@ -1,5 +1,7 @@
-package services;
+package com.empathuman.EmpatHumanAPI.services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,9 +14,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggerObserver implements Observer {
 
+    private static final Logger logger = LoggerFactory.getLogger(LoggerObserver.class);
+
     @Override
     public void update(String newValue) {
-        System.out.println("LoggerObserver: O valor do SingletonService foi alterado para: " + newValue);
+        logger.info("LoggerObserver: O valor do SingletonService foi alterado para: {}", newValue);
     }
 }
 

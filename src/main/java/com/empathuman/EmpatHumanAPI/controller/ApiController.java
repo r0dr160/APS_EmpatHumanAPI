@@ -1,11 +1,11 @@
-package controller;
+package com.empathuman.EmpatHumanAPI.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import services.AnalyticsService;
-import services.LoggerObserver;
-import services.SingletonService;
+import com.empathuman.EmpatHumanAPI.services.AnalyticsService;
+import com.empathuman.EmpatHumanAPI.services.LoggerObserver;
+import com.empathuman.EmpatHumanAPI.services.SingletonService;
 
 import java.util.List;
 import java.util.Map;

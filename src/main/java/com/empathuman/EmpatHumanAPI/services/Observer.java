@@ -1,4 +1,4 @@
-package services;
+package com.empathuman.EmpatHumanAPI.services;
 
 /**
  * Interface para os Observadores que desejam ser notificados de mudanças no estado.
